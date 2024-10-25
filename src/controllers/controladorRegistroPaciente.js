@@ -60,4 +60,14 @@ let datosFormularioPaciente={
     fechaAfiliacion:cajaFechaAfiliacion.value
 };
 console.log(datosFormularioPaciente);
+    cajaNombre.value = '';
+    cajaAnioNacimiento.value = '';
+    cajaCiudad.value = '';
+    cajaCorreo.value = '';
+    cajaTelefono.value = '';
+    cajaIps.value = '';
+    cajaFechaAfiliacion.value = '';
+    cajaGrupoIngreso.value = '';
+    cajaAsegurado.value = '';
+
 }); // perro guardian es el que escucha todo

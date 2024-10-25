@@ -59,4 +59,14 @@ botonRegistroMedico.addEventListener("click", function(evento){
         estaDisponibleFindesemana:cajaDisponible.value
     }
     console.log(datosFormularioMedico);
+
+        cajaNombre.value = '';
+        cajaMatricula.value = '';
+        cajaEspecialidad.value = '';
+        cajaSalario.value = '';
+        cajaIps.value = '';
+        cajaCorreo.value = '';
+        cajaTelefono.value = '';
+        cajaDireccion.value = '';
+        cajaDisponible.value = '';
 });// perro guardian es el que escucha todo

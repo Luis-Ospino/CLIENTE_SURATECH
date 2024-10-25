@@ -47,4 +47,9 @@ botonRegiostroSignoVital.addEventListener("click", function(evento){
         fechaMedida:cajaFechaSignoVital.value
     };
     console.log(datosFormularioSignoVital);
+
+    // limpiar formulario
+    cajaNombre.value = '';
+    cajaValor.value = '';
+    cajaFechaSignoVital.value = '';
 });// perro guardian es el que escucha todo
