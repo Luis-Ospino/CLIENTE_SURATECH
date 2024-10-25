@@ -58,6 +58,6 @@ let datosFormularioPaciente={
     tienePoliza:cajaAsegurado.value,
     grupoIngreso:cajaGrupoIngreso.value,
     fechaAfiliacion:cajaFechaAfiliacion.value
-}
+};
 console.log(datosFormularioPaciente);
 }); // perro guardian es el que escucha todo
