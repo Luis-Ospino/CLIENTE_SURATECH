@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SURATECH</title>
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg menu navbar-dark fixed-top">
+      <div class="container-fluid">
+        <a href="./index.html"><img src="./assets/img/logotipoSura.png" alt="logo" class="img-fluid" height="80px" width="80px"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active mx-3" aria-current="page" href="/index.html">Inicio</a>
+            </li>
+            <li class="nav-item active">
+              <select name="" id="selectorRegistros" class="nav-link mx-3 menu puntero"  onchange="location = this.value;">
+                <option value="/index.html"  class="menu">Registros</option>
+                <option value="/src/views/registroPaciente.html" class="menu">Pacientes</option>
+                <option value="/src/views/registroMedico.html" class="menu">Médicos</option>
+                <option value="/src/views/signoVital.html" class="menu">Signos vitales</option>
+                <option value="/src/views/registroMedicamento.html" class="menu">Medicamentos</option>
+                <option value="/src/views/registroEnfermedad.html" class="menu">Enfermedades</option>
+              </select>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Acerca de</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+        <main>
+          <section class="banner text-white">
+            <h3>SURATECH2</h3>
+            <h5>Pensamos en tu bienestar a través del cuidado diario</h5>
+            <a href="" class="btn btn-outline-primary">Ver más</a>
+          </section>
+          <section class="container my-5">
+            <div class="row" id="descripcion">
+              <div class="col-6">
+                <img src="./assets/img/tigre.png" alt="tigre" class="img-fluid">
+              </div>
+              <div class="col-6 text-center align-self-center">
+                <h3>SURATECH2</h3>
+                <hr>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque itaque, quaerat provident, ullam sunt maiores id omnis est ea illum necessitatibus adipisci, facere officia inventore dolores consequatur totam quos quidem?
+                </p>
+                <i class="bi bi-bandaid fs-1"></i>
+                <i class="bi bi-activity fs-1 mx-3"></i>
+                <i class="bi bi-telephone-inbound fs-1 mx-2"></i>
+              </div>
+            </div>
+          </section>
+          <section class="banner2">
+          </section>
+          <section class="container">
+            <div class="row justify-content-center">
+              <div class="col-8 my-5">
+                <h3 class="text-center">Registrate</h3>
+                <form class="shadow border rounded p-4">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text"> <i class="bi bi-person-circle"></i> </span>
+                    <input type="text" class="form-control" placeholder="Usuario">
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text"> <i class="bi bi-envelope"></i> </span>
+                    <input type="text" class="form-control" placeholder="Correo">
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text"> <i class="bi bi-key"></i> </span>
+                    <input type="text" class="form-control" placeholder="Contraseña">
+                  </div>
+                  <button type="submit" class="btn btn-primary">Registrarse</button>
+                </form>
+              </div>
+            </div>
+          </section>
+          <section class="container">
+            <div class="row row-cols-1 row-cols-md-3 g-3">
+              <div class="col">
+                <div class="card h-100 p-5 shadow">
+                  <h3>Servicio 1</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur eum sit dolorum distinctio sequi similique nisi tenetur ratione, corporis, repudiandae obcaecati porro temporibus velit iste expedita officiis? Rerum, iste distinctio.</p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100 p-5 shadow">
+                  <h3>Servicio 2</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur eum sit dolorum distinctio sequi similique nisi tenetur ratione, corporis, repudiandae obcaecati porro temporibus velit iste expedita officiis? Rerum, iste distinctio.</p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100 p-5 shadow">
+                  <h3>Servicio 3</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur eum sit dolorum distinctio sequi similique nisi tenetur ratione, corporis, repudiandae obcaecati porro temporibus velit iste expedita officiis? Rerum, iste distinctio.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+        <footer class="container-fluid g-0  text-white fondoAmarillo p-3 mt-5">
+          <div class="row">
+            <div class="col-12 col-md-6 text-end border-end">
+              <p> Luis Antonio Ospino Herrera </p>
+              <p> SURA MEDELLÍN </p>
+              <p>&copy;</p>
+            </div>
+            <div class="col-12 col-md-6 align-self-center">
+              <i class="bi bi-github fs-1"></i>
+              <i class="bi bi-filetype-java fs-1"></i>
+            </div>
+          </div>
+        </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

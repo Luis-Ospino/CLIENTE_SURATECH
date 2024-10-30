@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="../../assets/styles/style.css">
+    <title> SURATECH </title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg menu navbar-dark fixed-top">
+            <div class="container-fluid">
+                <a href="../../index.html"><img src="../../assets/img/logotipoSura.png" alt="logo" class="img-fluid" height="80px" width="80px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active mx-3" aria-current="page" href="../../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <select name="" id="selectorRegistros" class="nav-link mx-3"  onchange="location = this.value;">
+                                <option value="/index.html"  class="menu">Registros</option>
+                                <option value="/src/views/registroPaciente.html" class="menu">Pacientes</option>
+                                <option value="/src/views/registroMedico.html" class="menu">Médicos</option>
+                                <option value="/src/views/signoVital.html" class="menu">Signos vitales</option>
+                                <option value="/src/views/registroMedicamento.html" class="menu">Medicamentos</option>
+                                <option value="/src/views/registroEnfermedad.html" class="menu">Enfermedades</option>
+                            </select>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header> <br>
+    <main>
+        <section class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-4 align-self-center animate__animated animate__backInLeft">
+                    <h3>Medimos tus signos vitales</h3>
+                </div>
+                <div class="col-12 col-md-4 animate__animated animate__backInRight">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae soluta numquam accusamus, obcaecati provident ducimus temporibus rerum eveniet fugiat. Consectetur quisquam accusantium officiis dicta saepe. Alias totam neque similique facilis. Asperiores, consequatur reiciendis recusandae eius omnis adipisci quam aliquid iusto amet fuga, placeat velit! Minus beatae rem atque odio quisquam.</p>
+                </div>
+            </div>
+        </section>            
+        <section class="banner3"> </section>
+        <section class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-4">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae soluta numquam accusamus, obcaecati provident ducimus temporibus rerum eveniet fugiat. Consectetur quisquam accusantium officiis dicta saepe. Alias totam neque similique facilis. Asperiores, consequatur reiciendis recusandae eius omnis adipisci quam aliquid iusto amet fuga, placeat velit! Minus beatae rem atque odio quisquam.</p>
+                </div>
+                <div class="col-12 col-md-4  align-self-center ">
+                    <h3>Diagnósticos a tiempo</h3>
+                </div>
+            </div>
+        </section>
+        <section class="container-fluid menu p-3 text-white">
+            <div class="row">
+                <div class="col-12 col-md-5">
+                    <img src="../../assets/img/signosVitales.jpg" alt="" class="img-fluid">
+                </div>                
+                <div class="col-12 col-md-7 mt-5"> <br><br>
+                    <form class="border rounded shadow p-5">
+                        <div class="row">
+                            <div class="col-12">
+                                <label class="form-label">Signo Vital:</label> <br>
+                                <input class="form-control w-100" type="text" name="" id="nombreSignovital">
+                            </div>
+                        </div><br>
+                        <div class="row">
+                            <div class="col-12">
+                                <label class="form-label">Valor:</label> <br>
+                                <input class="form-control w-100" type="number" name="" id="valorSignovital">
+                            </div>
+                        </div><br>
+                        <div class="row">
+                            <div class="col-12">
+                                <label class="form-label">Fecha:</label><br>
+                                <input class="form-control w-100" type="date" name="" id="fechaSignovital">
+                            </div>
+                        </div><br>
+                        <button type="submit" class="btn btn-primary w-100" id="botonRegistroSignoVital">Registrar</button>                            
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+    </footer>
+    <script src="../controllers/controladorSignoVital.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>            
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
