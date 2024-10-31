@@ -69,6 +69,7 @@ pacientesSimulados.forEach(function(paciente){
     // 4. asocio las etiquetas
     eliminar.appendChild(iconoBasura);
     editar.appendChild(iconoEditar);
+    
     tarjeta.appendChild(etiquetaNombre);
     tarjeta.appendChild(etiquetaIcono);
     tarjeta.appendChild(etiquetaIPS);
