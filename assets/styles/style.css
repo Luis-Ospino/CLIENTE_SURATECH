@@ -2,11 +2,12 @@
     position: relative;
     background-image: url("../img/banner.png");
     background-position: top center;
-    background-size: cover;
-    background-attachment: fixed;
+    background-size:cover;
+    background-attachment:fixed;
     padding: 25%;
     z-index: 1;
 }
+/*
 .banner2{
     position: relative;
     background-image: url("../img/familiaFeliz.png");
@@ -14,7 +15,7 @@
     background-size: cover;
     background-attachment: fixed;
     padding: 25%;
-}
+}*/
 .banner3{
     position: relative;
     background-image: url("../img/medicoAtiende.png");
@@ -39,10 +40,10 @@
 }
 .fondo{
     background-color: #e5e5e5;
-}
-.fondoAmarillo{
-    background-color: rgb(255, 229, 0);
-}
+}/*
+.fondoAzul{
+    background-color: blue;
+}*/
 .puntero{
     cursor: pointer;
 }
