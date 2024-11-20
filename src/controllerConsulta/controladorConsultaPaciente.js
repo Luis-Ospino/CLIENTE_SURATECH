@@ -1,9 +1,13 @@
-import { pacientesSimulados } from "../data/simuladorPaciente.js";
+//import { pacientesSimulados } from "../data/simuladorPaciente.js";
 
-let fila = document.getElementById("fila");
+import { consultarPacientes } from "../services/serviciosPaciente.js";
+
+consultarPacientes()
+.then(function(respuestaBack){
+    let fila = document.getElementById("fila");
 // debo recorrer los datos de la base de datos para pintarlos
 
-pacientesSimulados.forEach(function(paciente){
+respuestaBack.forEach(function(paciente){
     console.log(paciente);
     
     // aplicando traversing
@@ -85,3 +89,6 @@ pacientesSimulados.forEach(function(paciente){
     columna.appendChild(tarjeta);
     fila.appendChild(columna);
 })
+})
+
+

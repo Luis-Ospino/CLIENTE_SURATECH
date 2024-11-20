@@ -19,6 +19,8 @@ el DOM es un mapa que le cuenta a js toda la información. en js DOM ES document
 
 */
 
+import { guardarPaciente } from "../services/serviciosPaciente.js";
+
 let cajaNombre=document.getElementById("nombrePaciente");
 let cajaAnioNacimiento=document.getElementById("nacimientoPaciente");
 let cajaCiudad=document.getElementById("ciudadPaciente");
@@ -37,17 +39,9 @@ let botonRegistroPaciente=document.getElementById("botonRegistroPaciente");
 
 botonRegistroPaciente.addEventListener("click", function(evento){
     evento.preventDefault(); // Para cuando se use el submit
-    Swal.fire({
-        title: "Buen trabajo!",
-        text: "Ya haces parte de nuestra Familia!",
-        icon: "success"
-      });
-
 /*
  6. Recoger los datos (los atributos del objeto se deben nombrar tal cual que en JAVA en la capa de modelos)
-*/
-
-      
+*/  
 let datosFormularioPaciente={
     nombre:cajaNombre.value,
     anioNacimiento:cajaAnioNacimiento.value,
@@ -59,6 +53,17 @@ let datosFormularioPaciente={
     grupoIngreso:cajaGrupoIngreso.value,
     fechaAfiliacion:cajaFechaAfiliacion.value
 };
+
+guardarPaciente(datosFormularioPaciente)
+.then(function(respuestaBack){
+    console.log(respuestaBack)
+    Swal.fire({
+        title: "Buen trabajo!",
+        text: "Ya haces parte de nuestra Familia!",
+        icon: "success"
+    });
+})
+
 console.log(datosFormularioPaciente);
     cajaNombre.value = '';
     cajaAnioNacimiento.value = '';
