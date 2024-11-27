@@ -38,6 +38,7 @@ let botonRegistroPaciente=document.getElementById("botonRegistroPaciente");
 */
 
 botonRegistroPaciente.addEventListener("click", function(evento){
+    
     evento.preventDefault(); // Para cuando se use el submit
 /*
  6. Recoger los datos (los atributos del objeto se deben nombrar tal cual que en JAVA en la capa de modelos)
