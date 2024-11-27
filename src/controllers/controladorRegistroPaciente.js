@@ -57,7 +57,7 @@ let datosFormularioPaciente={
 
 guardarPaciente(datosFormularioPaciente)
 .then(function(respuestaBack){
-    console.log(respuestaBack)
+    console.log(respuestaBack);
     Swal.fire({
         title: "Buen trabajo!",
         text: "Ya haces parte de nuestra Familia!",

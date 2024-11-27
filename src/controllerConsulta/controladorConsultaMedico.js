@@ -1,11 +1,16 @@
-import { medicosSimulados } from "../data/simuladorMedico.js";
+//import { medicosSimulados } from "../data/simuladorMedico.js";
+
+import {consultarMedico} from "../services/servicioMedico.js";
+
+consultarMedico()
+.then(function(respuestaBack){
 
 let fila = document.getElementById("fila");
 // debo recorrer los datos de la base de datos para pintarlos, en este caso la base de datos es simulada desde /data
 
 // a continuación hacemos un for each de los datos simulados, para hacer un TRAVERSING
 
-medicosSimulados.forEach(function(medico){
+respuestaBack.forEach(function(medico){
     console.log(medico);
 
     let columna = document.createElement("div");
@@ -82,3 +87,4 @@ medicosSimulados.forEach(function(medico){
     fila.appendChild(columna);
 })
 
+});

@@ -19,6 +19,8 @@ el DOM es un mapa que le cuenta a js toda la información. en js DOM ES document
 
 */
 
+import { guardarSignoVital } from "../services/servicioSignoVital.js";
+
 let cajaNombre=document.getElementById("nombreSignovital");
 let cajaValor=document.getElementById("valorSignovital");
 let cajaFechaSignoVital=document.getElementById("fechaSignovital");
@@ -31,11 +33,7 @@ let botonRegiostroSignoVital=document.getElementById("botonRegistroSignoVital");
 
 botonRegiostroSignoVital.addEventListener("click", function(evento){
     evento.preventDefault(); // Para cuando se use el submit
-    Swal.fire({
-        title: "Buen trabajo!",
-        text: "Hemos registrado tu Signo Vital !",
-        icon: "success"
-      });
+    
 
     /*
     6. Recoger los datos (los atributos del objeto se deben nombrar tal cual que en JAVA en la capa de modelos)
@@ -46,6 +44,17 @@ botonRegiostroSignoVital.addEventListener("click", function(evento){
         valor:cajaValor.value,
         fechaMedida:cajaFechaSignoVital.value
     };
+
+    guardarSignoVital(datosFormularioSignoVital)
+    .then(function(respuestaBack){
+        console.log(respuestaBack);
+        Swal.fire({
+            title: "Buen trabajo!",
+            text: "Hemos registrado tu Signo Vital !",
+            icon: "success"
+          });
+    })
+
     console.log(datosFormularioSignoVital);
 
     // limpiar formulario

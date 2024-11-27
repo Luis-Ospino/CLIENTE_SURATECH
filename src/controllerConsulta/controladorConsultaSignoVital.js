@@ -1,11 +1,16 @@
-import { signosVitalesSimulados } from "../data/simuladorSignoVital.js";
+//import { signosVitalesSimulados } from "../data/simuladorSignoVital.js";
 
+import { consultarSignoVital } from "../services/servicioSignoVital.js";
+
+consultarSignoVital()
+.then(function(respuestaBack){
+    
 let fila = document.getElementById("fila");
 // debo recorrer los datos de la base de datos para pintarlos, en este caso la base de datos es simulada desde /data
 
 // a continuación hacemos un for each de los datos simulados, para hacer un TRAVERSING
 
-signosVitalesSimulados.forEach(function(signoVital){
+respuestaBack.forEach(function(signoVital){
     console.log(signoVital);
 
     // procedemos con el traversing
@@ -65,5 +70,7 @@ signosVitalesSimulados.forEach(function(signoVital){
 
     columna.appendChild(tarjeta);
     fila.appendChild(columna);
+})
+
 })
 

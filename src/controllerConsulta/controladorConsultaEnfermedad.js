@@ -1,8 +1,14 @@
-import { enfermedadesSimuladas } from "../data/simuladorEnfermedad.js";
+// import { enfermedadesSimuladas } from "../data/simuladorEnfermedad.js";
+
+import { consultarEnfermedad } from "../services/serviciosEnfermedad.js";
+
+consultarEnfermedad()
+.then(function(respuestaBack){
+
 
 let fila = document.getElementById("fila");
 
-enfermedadesSimuladas.forEach(function(enfermedad){
+respuestaBack.forEach(function(enfermedad){
     console.log(enfermedad);
 
     let columna = document.createElement("div");
@@ -57,3 +63,5 @@ enfermedadesSimuladas.forEach(function(enfermedad){
     columna.appendChild(tarjeta);
     fila.appendChild(columna);
 })
+
+});

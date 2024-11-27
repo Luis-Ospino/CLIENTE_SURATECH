@@ -1,8 +1,14 @@
-import { medicamentosSimulados } from "../data/simuladorMedicamento.js";
+// import { medicamentosSimulados } from "../data/simuladorMedicamento.js";
+
+import {consultarMedicamento} from "../services/serviciosMedicamento.js";
+
+consultarMedicamento()
+.then(function(respuestaBack){
+
 
 let fila = document.getElementById("fila");
 
-medicamentosSimulados.forEach(function(medicamento){
+respuestaBack.forEach(function(medicamento){
     console.log(medicamento);
 
     let columna = document.createElement("div");
@@ -67,3 +73,5 @@ medicamentosSimulados.forEach(function(medicamento){
     columna.appendChild(tarjeta);
     fila.appendChild(columna);
 })
+
+});

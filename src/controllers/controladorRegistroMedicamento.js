@@ -18,6 +18,8 @@ el DOM es un mapa que le cuenta a js toda la información. en js DOM ES document
 4. Asociar a cada variable el id que se configuró en HTML
 
 */
+import { guardarMedicamento } from "../services/serviciosMedicamento.js";
+
 let cajaNombreMedicamento = document.getElementById("nombreMedicamento");
 let cajaPresentacionMedicamento = document.getElementById("presentacionMedicamento");
 let cajaDosisMedicamento = document.getElementById("dosisMedicamento");
@@ -36,11 +38,7 @@ let botonRegistroMedicamento = document.getElementById("botonRegistroMedicamento
 
 botonRegistroMedicamento.addEventListener("click", function(evento){
     evento.preventDefault(); // Para cuando se use el submit
-    Swal.fire({
-        title: "Buen trabajo!",
-        text: "Hemos registrado tu Signo Vital !",
-        icon: "success"
-      });
+    
 
     /*
     6. Recoger los datos (los atributos del objeto se deben nombrar tal cual que en JAVA en la capa de modelos)
@@ -56,6 +54,20 @@ botonRegistroMedicamento.addEventListener("click", function(evento){
         registroInvima:cajaRegistroInvimaMedicamento.value,
         tieneCoopago:cajaTieneCoopagoMedicamento.value
     }
+
+    guardarMedicamento(datosFormularioMedicamento)
+.then(function(respuestaBack){
+    console.log(respuestaBack);
+
+    Swal.fire({
+        title: "Buen trabajo!",
+        text: "Hemos registrado tu Medicamento !",
+        icon: "success"
+      });
+
+
+})
+
     console.log(datosFormularioMedicamento);
     // limpiar el formulario
     cajaNombreMedicamento.value = '';
